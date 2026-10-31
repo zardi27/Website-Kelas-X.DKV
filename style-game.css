@@ -1,0 +1,640 @@
+:root {
+    --bg: #0b1020;
+    --panel: #151e33;
+    --muted: #9eabc5;
+    --text: #f7f8fc;
+    --red: #f04452;
+    --blue: #3185ff;
+    --yellow: #ffd43b;
+    --green: #23c77a;
+}
+
+/* Pengaturan dasar */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(
+        ellipse at top,
+        #203456 0,
+        #0b1020 58%
+    );
+    font-family: Nunito, Segoe UI, Arial, sans-serif;
+    color: var(--text);
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    transition: transform 0.15s, filter 0.15s;
+}
+
+button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    opacity: 0.42;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Layout utama */
+.app {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 16px 32px;
+}
+
+.topbar,
+.gamebar,
+.gamebar-actions,
+.button-row,
+.hand-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.topbar {
+    margin-bottom: 22px;
+}
+
+.brand {
+    font-weight: 1000;
+    font-size: 1.25rem;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.04em;
+}
+
+.brand span {
+    color: #ff5967;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 11px;
+    background: #ffffff12;
+    border: 1px solid #ffffff1b;
+    border-radius: 999px;
+    color: #dbe5fb;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.panel {
+    background: #151e33eF;
+    border: 1px solid #ffffff18;
+    border-radius: 22px;
+    box-shadow: 0 18px 55px #0003;
+}
+
+/* Menu dan pilihan mode */
+.menu,
+.setup {
+    max-width: 760px;
+    margin: 7vh auto;
+    padding: clamp(22px, 5vw, 44px);
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: #ffd43b;
+    margin: 0 0 8px;
+}
+
+.menu h1 {
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    line-height: 1;
+    margin: 8px 0;
+    letter-spacing: -0.07em;
+}
+
+.menu h1 span {
+    color: #ff5967;
+}
+
+.muted {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.menu > .muted {
+    max-width: 480px;
+    margin: 14px auto 28px;
+}
+
+.mode-grid {
+    display: grid;
+    /* Satu pilihan mode tetap tepat di tengah */
+    grid-template-columns: minmax(0, 330px);
+    justify-content: center;
+    gap: 14px;
+    margin: 24px auto 0;
+    width: 100%;
+}
+
+.mode-card {
+    padding: 22px 18px;
+    text-align: left;
+    border-radius: 17px;
+    background: #ffffff08;
+    border: 1px solid #ffffff20;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-height: 175px;
+}
+
+.mode-card:hover {
+    border-color: #ffd43b88;
+    background: #ffffff0d;
+}
+
+.mode-icon {
+    font-size: 2rem;
+}
+
+.mode-card strong {
+    font-size: 1.05rem;
+}
+
+.mode-card small {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.tiny {
+    font-size: 0.78rem;
+    color: #7f8ca8;
+    line-height: 1.5;
+}
+
+/* Form pengaturan permainan */
+.setup {
+    text-align: left;
+}
+
+.setup h2 {
+    margin: 16px 0 4px;
+}
+
+.setup label {
+    display: block;
+    text-align: left;
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin: 17px 0;
+}
+
+.setup input {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    border: 1px solid #ffffff25;
+    background: #0c1425;
+    color: white;
+    padding: 13px 14px;
+    border-radius: 12px;
+    outline: none;
+}
+
+.setup input:focus {
+    border-color: #ffd43b;
+}
+
+/* Tombol */
+.primary,
+.secondary {
+    padding: 12px 17px;
+    border-radius: 12px;
+    font-weight: 900;
+}
+
+.primary {
+    background: linear-gradient(135deg, #ff5967, #e72d70);
+    color: white;
+    box-shadow: 0 8px 20px #f0445230;
+}
+
+.secondary {
+    background: #ffffff10;
+    color: white;
+    border: 1px solid #ffffff20;
+}
+
+.text-button {
+    background: transparent;
+    color: #b9c6df;
+    padding: 8px;
+}
+
+.message {
+    min-height: 22px;
+    color: #ffd43b;
+    font-size: 0.9rem;
+}
+
+/* Bar permainan */
+.gamebar {
+    padding: 16px 20px;
+    margin-bottom: 14px;
+}
+
+.gamebar h2 {
+    font-size: 1.15rem;
+    margin: 2px 0 0;
+}
+
+.gamebar-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.compact {
+    padding: 9px 12px;
+}
+
+/* Meja permainan */
+.table {
+    padding: clamp(12px, 3vw, 24px);
+    background: linear-gradient(135deg, #172d48, #10413e);
+    overflow: hidden;
+}
+
+/* Pemain lawan */
+.opponents {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.opponent {
+    background: #07111c6b;
+    border: 1px solid #ffffff16;
+    border-radius: 15px;
+    padding: 11px 8px;
+    text-align: center;
+    min-width: 0;
+}
+
+.opponent.active {
+    border-color: #ffd43b;
+    box-shadow: 0 0 0 2px #ffd43b2b;
+}
+
+.avatar {
+    font-size: 1.55rem;
+}
+
+.op-name {
+    font-size: 0.86rem;
+    font-weight: 900;
+    overflow-wrap: anywhere;
+}
+
+.op-count {
+    font-size: 0.75rem;
+    color: #bdc9e0;
+    margin-top: 3px;
+}
+
+.turn-label {
+    display: inline-block;
+    background: #ffd43b;
+    color: #1b2436;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 99px;
+    margin-left: 4px;
+}
+
+/* Area kartu di tengah */
+.play-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(28px, 10vw, 100px);
+    padding: 28px 0 16px;
+}
+
+.pile-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.pile-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: #bdc9e0;
+}
+
+/* Tumpukan kartu */
+.deck {
+    width: 76px;
+    height: 112px;
+    border: 4px solid white;
+    border-radius: 13px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ed3d59 0 7px,
+        #c51f45 7px 14px
+    );
+    box-shadow: 0 8px 18px #0004;
+    display: grid;
+    place-items: center;
+}
+
+.deck span {
+    font-weight: 1000;
+    font-size: 1.25rem;
+    background: #111a2e;
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 9px;
+    color: white;
+    transform: rotate(-12deg);
+}
+
+/* Desain kartu UNO */
+.card {
+    width: 62px;
+    height: 92px;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px #0004;
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 1000;
+    text-shadow: 1px 2px 2px #0005;
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    inset: 6px 4px;
+    border: 2px solid #ffffffa8;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+}
+
+.card span {
+    position: relative;
+    z-index: 1;
+}
+
+.red {
+    background: var(--red);
+}
+
+.blue {
+    background: var(--blue);
+}
+
+.yellow {
+    background: var(--yellow);
+    color: #222;
+    text-shadow: none;
+}
+
+.green {
+    background: var(--green);
+}
+
+.wild {
+    background: conic-gradient(
+        var(--red) 0 25%,
+        var(--blue) 25% 50%,
+        var(--yellow) 50% 75%,
+        var(--green) 75%
+    );
+}
+
+.large {
+    width: 86px;
+    height: 128px;
+    font-size: 2.3rem;
+}
+
+/* Status permainan */
+.status {
+    text-align: center;
+    min-height: 25px;
+    font-weight: 800;
+    color: #e5edfc;
+    margin: 0 0 14px;
+}
+
+/* Kartu di tangan pemain */
+.hand-area {
+    border-top: 1px solid #ffffff1c;
+    padding-top: 16px;
+}
+
+.hand-heading {
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.hand {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    overflow-x: auto;
+    min-height: 125px;
+    padding: 8px 4px 15px;
+}
+
+.hand .card {
+    width: 63px;
+    height: 94px;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.hand .card:hover {
+    transform: translateY(-9px) rotate(-2deg);
+}
+
+.hand .card:disabled {
+    filter: grayscale(0.35);
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.center {
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.footer-note {
+    text-align: center;
+    margin: 13px 0;
+}
+
+/* Modal pilihan warna */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #030713d9;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    z-index: 5;
+}
+
+.modal {
+    width: min(410px, 100%);
+    padding: 24px;
+    text-align: center;
+}
+
+.modal h2 {
+    margin: 0 0 8px;
+}
+
+.color-choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.color-pick {
+    padding: 14px 8px;
+    border-radius: 12px;
+    font-weight: 900;
+    color: white;
+}
+
+.color-pick.yellow {
+    color: #222;
+}
+
+.modal .secondary {
+    margin-top: 6px;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .app {
+        padding: 12px 9px 24px;
+    }
+
+    .mode-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mode-card {
+        min-height: 0;
+        padding: 16px;
+    }
+
+    .menu,
+    .setup {
+        margin: 3vh auto;
+    }
+
+    .gamebar {
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .gamebar-actions {
+        gap: 5px;
+    }
+
+    .gamebar h2 {
+        font-size: 1rem;
+    }
+
+    .gamebar-actions .tag {
+        display: none;
+    }
+
+    .opponents {
+        gap: 5px;
+    }
+
+    .opponent {
+        padding: 8px 3px;
+    }
+
+    .op-name {
+        font-size: 0.75rem;
+    }
+
+    .op-count {
+        font-size: 0.68rem;
+    }
+
+    .play-area {
+        padding: 23px 0 13px;
+        gap: 45px;
+    }
+
+    .deck {
+        width: 65px;
+        height: 97px;
+    }
+
+    .large {
+        width: 73px;
+        height: 109px;
+    }
+
+    .hand {
+        gap: 6px;
+    }
+
+    .hand .card {
+        width: 56px;
+        height: 84px;
+        font-size: 1.5rem;
+    }
+
+    .status {
+        font-size: 0.88rem;
+    }
+
+    .button-row {
+        flex-wrap: wrap;
+    }
+
+    .setup .button-row > * {
+        flex: 1;
+    }
+
+    .tag {
+        font-size: 0.72rem;
+    }
+}

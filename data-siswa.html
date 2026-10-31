@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Data Siswa X.DKV</title>
+</head>
+<body class="data-page">
+
+    <header>
+        <h1>Data Siswa Kelas X.DKV</h1>
+        <p>Kreatif, Inovatif, dan Berkarakter Digital</p>
+    </header>
+        
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="jadwal.html">Jalwal</a>
+        <a href="struktur.html">Struktur</a>
+        <a href="data-siswa.html" class="active">Data Siswa</a>
+        <a href="piket.html">Piket</a>
+        <a href="dokumentasi.html">Dokumentasi</a>
+        <a href="uno.html">Uno</a>
+    </nav>
+
+    <div class="walas-container">
+        <div class="walas-card">
+            <img src="walas.JPG" class="walas-foto" alt="Foto Wali Kelas">
+            <h2>Eroh Humaeroh S.KOM</h2>
+            <span class="badge-walas">Wali Kelas X.DKV</span>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="cariSiswa" placeholder="🔍 Cari nama siswa di sini..." onkeyup="filterSiswa()">
+    </div>
+
+    <div class="siswa-grid" id="daftarSiswa">
+        <!-- Absen 01 - 21 -->
+        <div class="siswa-item"><img src="ajeng.jpg" alt="Ajeng"><div class="siswa-info"><h3>Ajeng Rahmadani</h3><span class="badge-absen">No. Absen 01</span><p class="keahlian">Minat: Estetika & Bakat: Make Up</p></div></div>
+        <div class="siswa-item"><img src="tendri.jpg" alt="Andi"><div class="siswa-info"><h3>Andi Tendri</h3><span class="badge-absen">No. Absen 02</span><p class="keahlian">Minat: Paskib & Bakat: Game</p></div></div>
+        <div class="siswa-item"><img src="nafisha.jpg" alt="Angela"><div class="siswa-info"><h3>Angela Nafisha Azhary</h3><span class="badge-absen">No. Absen 03</span><p class="keahlian">Minat: Estetika & Bakat: Visual</p></div></div>
+        <div class="siswa-item"><img src="angelica.jpg" alt="Angelica"><div class="siswa-info"><h3>Angelica Kireina Agta</h3><span class="badge-absen">No. Absen 04</span><p class="keahlian">Minat: Menghias & Bakat: Desain</p></div></div>
+        <div class="siswa-item"><img src="anggita.jpg" alt="Anggita"><div class="siswa-info"><h3>Anggita Khoiru Nazwa</h3><span class="badge-absen">No. Absen 05</span><p class="keahlian">Minat: Kesehatan, Membaca & Bakat: Linguistik, pertunjukan</p></div></div>
+        <div class="siswa-item"><img src="asyifa-a.jpg" alt="Asyifa"><div class="siswa-info"><h3>Asyifa Arya Cinta</h3><span class="badge-absen">No. Absen 06</span><p class="keahlian">Minat: Seni, Bahasa & Bakat: Memnggambar</p></div></div>
+        <div class="siswa-item"><img src="asyif-n.jpg" alt="Asyifah"><div class="siswa-info"><h3>Asyifah Nurlailah</h3><span class="badge-absen">No. Absen 07</span><p class="keahlian">Minat: Menggambar & Bakat: Estetika</p></div></div>
+        <div class="siswa-item"><img src="bilqis.jpg" alt="Bilqis"><div class="siswa-info"><h3>Bilqis Rahma Savitri</h3><span class="badge-absen">No. Absen 08</span><p class="keahlian">Minat: Menyanyi, Membaca & Bakat: Menulis Cerita, Quotes, Puisi</p></div></div>
+        <div class="siswa-item"><img src="chantika.jpg" alt="Chantika"><div class="siswa-info"><h3>Chantika</h3><span class="badge-absen">No. Absen 09</span><p class="keahlian">Minat: Mendengar Musik & Bakat: Bermain Alat Musik</p></div></div>
+        <div class="siswa-item"><img src="daffa.jpg" alt="Daffa"><div class="siswa-info"><h3>Daffa Putra Pratama</h3><span class="badge-absen">No. Absen 10</span><p class="keahlian">Minat: Editing & Bakat: Graphic Desingn </p></div></div>
+        <div class="siswa-item"><img src="danu.jpg" alt="Danu"><div class="siswa-info"><h3>Danu Arta</h3><span class="badge-absen">No. Absen 11</span><p class="keahlian">Minat: Pro Pleyer & Bakat: Game</p></div></div>
+        <div class="siswa-item"><img src="dea.jpg" alt="Dea"><div class="siswa-info"><h3>Dea Naura Nurhayati</h3><span class="badge-absen">No. Absen 12</span><p class="keahlian">Minat: Membaca & Bakat: Bahasa </p></div></div>
+        <div class="siswa-item"><img src="yaya.jpg" alt="Erhilia"><div class="siswa-info"><h3>Erhilia Juman</h3><span class="badge-absen">No. Absen 13</span><p class="keahlian">Minat: Musik & Bakat: Berenang</p></div></div>
+        <div class="siswa-item"><img src="esa.jpg" alt="Esa"><div class="siswa-info"><h3>Esa Fahreza</h3><span class="badge-absen">No. Absen 14</span><p class="keahlian">Minat: Fashion & Bakat: Desain</p></div></div>
+        <div class="siswa-item"><img src="Exist.jpg" alt="Exsit"><div class="siswa-info"><h3>Exsit Al Mughniy Kansha</h3><span class="badge-absen">No. Absen 15</span><p class="keahlian">Minat: Gambar & Bakat: Desain</p></div></div>
+        <div class="siswa-item"><img src="fazia.jpg" alt="Fazia"><div class="siswa-info"><h3>Fazia</h3><span class="badge-absen">No. Absen 16</span><p class="keahlian">-</p></div></div>
+        <div class="siswa-item"><img src="febri.jpg" alt="Febriyansyah"><div class="siswa-info"><h3>Febriyansyah</h3><span class="badge-absen">No. Absen 17</span><p class="keahlian">Minat & Bakat: Editing Foto/Video</p></div></div>
+        <div class="siswa-item"><img src="fitri.jpg" alt="Fitriya"><div class="siswa-info"><h3>Fitriya Ramadhani Pratiwi</h3><span class="badge-absen">No. Absen 18</span><p class="keahlian">Minat: Lari & Bakat; Futsal</p></div></div>
+        <div class="siswa-item"><img src="cantiqa.jpg" alt="Fyra"><div class="siswa-info"><h3>Fyra Cantiqa Aryani</h3><span class="badge-absen">No. Absen 19</span><p class="keahlian">Minat: Olahraga & Bakat: Tari, Renang, Tenis Meja, dll</p></div></div>
+        <div class="siswa-item"><img src="ara.jpg" alt="Khotimah"><div class="siswa-info"><h3>Khotimah Az-Zahra</h3><span class="badge-absen">No. Absen 20</span><p class="keahlian">Minat: Seni & Bakat: Gambar</p></div></div>
+        <div class="siswa-item"><img src="lutfi.jpg" alt="Lutfiana"><div class="siswa-info"><h3>Lutfiana Fadila</h3><span class="badge-absen">No. Absen 21</span><p class="keahlian">Minat: Game & Bakat: Memasak</p></div></div>
+        <div class="siswa-item"><img src="megita.jpg" alt="Megita"><div class="siswa-info"><h3>Megita Triyani</h3><span class="badge-absen">No. Absen 22</span><p class="keahlian">Minat & Bakat: Make Up ( MUA/Beauty )</p></div></div>
+        <div class="siswa-item"><img src="alif.jpg" alt="Alif"><div class="siswa-info"><h3>Muhammad Alif Usman</h3><span class="badge-absen">No. Absen 23</span><p class="keahlian">Minat: Membaca & Bakat: Gambar</p></div></div>
+        <div class="siswa-item"><img src="pasya.jpg" alt="Pasha"><div class="siswa-info"><h3>Muhammad Fadli Pasha</h3><span class="badge-absen">No. Absen 24</span><p class="keahlian">Minat: Beladiri & Bakat: Atletik Voli</p></div></div>
+        <div class="siswa-item"><img src="khadafi.jpg" alt="Khadafi"><div class="siswa-info"><h3>Muhammad Khadafi</h3><span class="badge-absen">No. Absen 25</span><p class="keahlian">Minat: Editing, Reading Visual Novel & Bakat: Editing</p></div></div>
+        <div class="siswa-item"><img src="rizky.jpg" alt="Nurrizky"><div class="siswa-info"><h3>Muhammad Nurrizky Ananda</h3><span class="badge-absen">No. Absen 26</span><p class="keahlian">Minat: DKV & Bakat: Olahraga</p></div></div>
+        <div class="siswa-item"><img src="nabilah.jpg" alt="Nabilah"><div class="siswa-info"><h3>Nabilah</h3><span class="badge-absen">No. Absen 27</span><p class="keahlian">Minat: Mendengarkan Musik & Bakat: Gambar</p></div></div>
+        <div class="siswa-item"><img src="nada.jpg" alt="Nada"><div class="siswa-info"><h3>Nada Zaqylbi Aszaq</h3><span class="badge-absen">No. Absen 28</span><p class="keahlian">Minat: Memasak, Menyayi & Bakat: Memasak, Suara Besar</p></div></div>
+        <div class="siswa-item"><img src="nazwa.jpg" alt="Nazwua"><div class="siswa-info"><h3>Nazwua Safitri</h3><span class="badge-absen">No. Absen 29</span><p class="keahlian">Minat: Bidang Komputer & Bakat: Gambar</p></div></div>
+        <div class="siswa-item"><img src="nisya.jpg" alt="Nisya"><div class="siswa-info"><h3>Nisya Naila Nida</h3><span class="badge-absen">No. Absen 30</span><p class="keahlian">Minat: Memasak & Bakat: Make Up</p></div></div>
+        <div class="siswa-item"><img src="qotrun.jpg" alt="Qatrunnada"><div class="siswa-info"><h3>Qatrunnada Amalia Suhendar</h3><span class="badge-absen">No. Absen 31</span><p class="keahlian">Minat: Olahraga & Bakat: Renang</p></div></div>
+        <div class="siswa-item"><img src="raehana.jpg" alt="Raehana"><div class="siswa-info"><h3>Raehana</h3><span class="badge-absen">No. Absen 32</span><p class="keahlian">Minat: Silat & Bakat: Gambar</p></div></div>
+        <div class="siswa-item"><img src="rika.jpg" alt="Rika"><div class="siswa-info"><h3>Rika Putri Rabbani</h3><span class="badge-absen">No. Absen 33</span><p class="keahlian">Minat: Arsitek & Bakat: Memasak</p></div></div>
+        <div class="siswa-item"><img src="riki.jpg" alt="Riki"><div class="siswa-info"><h3>Riki Putra Rabbani</h3><span class="badge-absen">No. Absen 34</span><p class="keahlian">Minat: Coding & Bakat:Futsal</p></div></div>
+        <div class="siswa-item"><img src="sabrina.jpg" alt="Sabrina"><div class="siswa-info"><h3>Sabrina Anjani Sunarya</h3><span class="badge-absen">No. Absen 35</span><p class="keahlian">Minat: Gamnbar/Melukis & Bakat: Editing </p></div></div>
+        <div class="siswa-item"><img src="safira.jpg" alt="Safira"><div class="siswa-info"><h3>Safira Helia Putri</h3><span class="badge-absen">No. Absen 36</span><p class="keahlian">Minat & Bakat: Fotografi & Gambar</p></div></div>
+        <div class="siswa-item"><img src="safira-y.jpg" alt="Safira"><div class="siswa-info"><h3>Safira Yosiana</h3><span class="badge-absen">No. Absen 37</span><p class="keahlian">Minat:Scroll Tiktok & Bakat: Menari</p></div></div>
+        <div class="siswa-item"><img src="syifa-annisa.jpg" alt="Syifa"><div class="siswa-info"><h3>Syifa Annisa Mardiyatillah</h3><span class="badge-absen">No. Absen 38</span><p class="keahlian">Minat & Bakat:Gambar & Desain Grafuis</p></div></div>
+        <div class="siswa-item"><img src="tabita.jpg" alt="Tabita"><div class="siswa-info"><h3>Tabita Kazia Aprilia</h3><span class="badge-absen">No. Absen 39</span><p class="keahlian">Minat: Paskib& Bakat: Menari</p></div></div>
+        <div class="siswa-item"><img src="wika.jpg" alt="Wika"><div class="siswa-info"><h3>Wika Nur Aida</h3><span class="badge-absen">No. Absen 40</span><p class="keahlian">Minat: Literasi & Bakat: Bahasa</p></div></div>
+        <div class="siswa-item"><img src="zhafran.jpg" alt="Zhafran"><div class="siswa-info"><h3>Zhafran Satria Hendrawan</h3><span class="badge-absen">No. Absen 41</span><p class="keahlian">Minat: Main Game & Bakat: Bermain Game (Mobile Lengends: Bang Bang)</p></div></div>
+        <script>
+        function filterSiswa() {
+            let input = document.getElementById('cariSiswa').value.toLowerCase();
+             let grid = document.getElementById('daftarSiswa');
+             let items = grid.getElementsByClassName('siswa-item');
+
+             for (let i = 0; i < items.length; i++) {
+        </script>
+          
+<audio id="musik" autoplay loop>
+    <source src="3.03 pm.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

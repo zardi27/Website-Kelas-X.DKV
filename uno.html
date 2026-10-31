@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNO CLASS</title>
+  <link rel="stylesheet" href="style-game.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Kembali ke web kelas"><span>UNO</span> CLASS</a>
+      <span class="tag">CARD GAME</span>
+    </header>
+
+    <section id="menu" class="panel menu">
+      <p class="eyebrow">PLAY WITH YOUR CLASS</p>
+      <h1>UNO <span>CLASS</span></h1>
+      <p class="muted">Main sendiri melawan 3 bot. Tidak perlu database atau koneksi multiplayer.</p>
+      <div class="mode-grid">
+        <button class="mode-card" id="botMode">
+          <span class="mode-icon">🤖</span><strong>Lawan Komputer</strong>
+          <small>Main sendiri melawan 3 bot. Tidak perlu internet.</small>
+        </button>
+      </div>
+      <p class="tiny">Mode offline · Tidak perlu database atau konfigurasi Firebase.</p>
+    </section>
+
+    <section id="game" class="hidden">
+      <div class="gamebar panel">
+        <div><span class="eyebrow">UNO CLASS</span><h2 id="gameTitle">Lawan Komputer</h2></div>
+        <div class="gamebar-actions"><span id="roomBadge" class="tag hidden"></span><button class="secondary compact" id="newGame">↻ Mulai Ulang</button><button class="text-button" id="exitGame">Keluar</button></div>
+      </div>
+      <div class="table panel">
+        <div id="opponents" class="opponents"></div>
+        <div class="play-area">
+          <div class="pile-block"><span class="pile-label">Ambil kartu</span><button id="drawPile" class="deck" aria-label="Ambil kartu"><span>UNO</span></button></div>
+          <div class="pile-block"><span class="pile-label">Kartu di meja</span><div id="discard" class="card large red"><span>5</span></div></div>
+        </div>
+        <p id="status" class="status" aria-live="polite">Siap bermain!</p>
+        <div class="hand-area">
+          <div class="hand-heading"><strong>Kartu kamu</strong><span id="handCount" class="tag">0 kartu</span></div>
+          <div id="hand" class="hand"></div>
+          <div class="button-row center"><button class="secondary" id="unoButton">UNO!</button><button class="secondary" id="passButton" disabled>Lewati giliran</button></div>
+        </div>
+      </div>
+      <p class="tiny footer-note">UNO CLASS versi offline · Kamu vs 3 bot.</p>
+    </section>
+  </main>
+
+  <div id="modal" class="modal-backdrop hidden">
+    <div class="modal panel">
+      <h2 id="modalTitle">Pilih warna</h2>
+      <p id="modalText" class="muted">Pilih warna untuk melanjutkan.</p>
+      <div id="colorChoices" class="color-choices">
+        <button data-color="red" class="color-pick red">Merah</button>
+        <button data-color="blue" class="color-pick blue">Biru</button>
+        <button data-color="yellow" class="color-pick yellow">Kuning</button>
+        <button data-color="green" class="color-pick green">Hijau</button>
+      </div>
+      <button id="modalClose" class="secondary hidden">Tutup</button>
+    </div>
+  </div>
+  <script src="script-game.js"></script>
+</body>
+</html>
